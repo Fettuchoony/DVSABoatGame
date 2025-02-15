@@ -9,14 +9,9 @@ public class PlayerController : MonoBehaviour
 {
  private Keyboard curKeyboard = Keyboard.current;
  private Rigidbody rb;
- private float movementX;
- private float movementY;
- private float rotationY = 0f;
  public float speed = 0; 
  public float maxSpeed = 10;
- public float rotationSpeed = 0;
-
-private bool deboucne = false;
+//  public float rotationSpeed = 0;
  public float drag = 0f;
  public Transform front;
  private int isGoingForward;
