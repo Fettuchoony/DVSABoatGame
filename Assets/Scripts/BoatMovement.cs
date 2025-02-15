@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(1 * transform.forward * speed);
             }
         }else if(curKeyboard.sKey.isPressed){
-            rb.AddForce(0.5f*transform.forward*-speed/2);
+            rb.AddForce(0.5f*transform.forward*-speed/4);
         }
         if(curKeyboard.aKey.isPressed){
             transform.eulerAngles += UnityEngine.Vector3.down;

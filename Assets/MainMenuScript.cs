@@ -1,0 +1,12 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class MainMenuScript : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public void OnPlayButton(){
+        Debug.Log("Played!!!!!!!");
+        SceneManager.LoadScene(0);
+    }
+}
