@@ -12,11 +12,17 @@ public class PlayerController : MonoBehaviour
  public float maxSpeed = 10;
  public float drag = 0f;
  private bool isPaused = false;
+ public ParticleSystem motorSpray;
+ private Transform propeller;
 
  private float lastPause;
     void Start(){
         rb = GetComponent<Rigidbody>();
         canvas.SetActive(false);
+        Transform propObj = transform.Find("Propeller");
+        if (propeller != null) {
+            propeller = propObj.transform;
+        }
     }
     void Update(){
         if(!isPaused){
@@ -41,6 +47,8 @@ public class PlayerController : MonoBehaviour
      
     }
     private void FixedUpdate(){
+        motorSpray.transform.position = propeller.position;
+        motorSpray.transform.rotation = propeller.rotation;
         rb.linearVelocity =  drag*rb.linearVelocity;
     }
 
