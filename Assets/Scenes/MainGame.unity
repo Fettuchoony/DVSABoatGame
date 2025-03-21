@@ -527,7 +527,6 @@ GameObject:
   - component: {fileID: 666739293}
   - component: {fileID: 666739299}
   - component: {fileID: 666739298}
-  - component: {fileID: 666739297}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -625,22 +624,6 @@ Transform:
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &666739297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666739292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e8926422da242c42a368a8d87ee50b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 1510714344}
-  speed: 10
-  maxSpeed: 10
-  drag: 0.97
 --- !u!114 &666739298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,7 +813,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666739297}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: onResume
         m_Mode: 1
@@ -963,7 +946,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666739297}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: onMainMenu
         m_Mode: 1
