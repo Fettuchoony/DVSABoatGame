@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
             propeller = propObj.transform;
         }
     }
+
     void Update(){
         if(!isPaused){
             if(curKeyboard.wKey.isPressed){
@@ -47,8 +48,8 @@ public class PlayerController : MonoBehaviour
      
     }
     private void FixedUpdate(){
-        motorSpray.transform.position = propeller.position;
-        motorSpray.transform.rotation = propeller.rotation;
+        // motorSpray.transform.position = propeller.position;
+        // motorSpray.transform.rotation = propeller.rotation;
         rb.linearVelocity =  drag*rb.linearVelocity;
     }
 
