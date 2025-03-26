@@ -1998,8 +1998,8 @@
     "m_ObjectId": "08bc5fdf02f24ed9b9712cc96a7cd9f4",
     "m_Title": "Water Depth Fade",
     "m_Position": {
-        "x": 3797.599853515625,
-        "y": 386.4000244140625
+        "x": 3797.99951171875,
+        "y": 387.0001220703125
     }
 }
 
@@ -2534,10 +2534,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.0,
-        "g": 0.034103259444236758,
-        "b": 0.7215686440467835,
-        "a": 0.4627451002597809
+        "r": 0.1329209953546524,
+        "g": 0.2814977765083313,
+        "b": 0.9716981053352356,
+        "a": 0.5529412031173706
     },
     "isMainColor": false,
     "m_ColorMode": 0
@@ -2876,10 +2876,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.4431372880935669,
-        "g": 0.8750767707824707,
-        "b": 0.8980392217636108,
-        "a": 0.3176470696926117
+        "r": 0.13333334028720857,
+        "g": 0.2823529541492462,
+        "b": 0.9725490212440491,
+        "a": 0.0
     },
     "isMainColor": false,
     "m_ColorMode": 0
@@ -3508,8 +3508,8 @@
     "m_ObjectId": "2c084c5dd51f4025aac9445aa6e2dc12",
     "m_Title": "Water Reflection",
     "m_Position": {
-        "x": 3008.800048828125,
-        "y": -139.20001220703126
+        "x": 3008.999755859375,
+        "y": -137.99986267089845
     }
 }
 
@@ -7108,11 +7108,11 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 0.0,
     "m_FloatType": 1,
     "m_RangeValues": {
         "x": 0.0,
-        "y": 10.0
+        "y": 0.10000000149011612
     }
 }
 
@@ -7221,8 +7221,8 @@
     "m_ObjectId": "9230d113ac5c4814833997f437aaf1ff",
     "m_Title": "Big semitransparent foam lines",
     "m_Position": {
-        "x": 2869.599853515625,
-        "y": 2097.599609375
+        "x": 2869.999755859375,
+        "y": 2098.99951171875
     }
 }
 
@@ -7356,7 +7356,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 100.0,
+    "m_Value": 200.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -7386,7 +7386,7 @@
     "m_Title": "Distance fading effect",
     "m_Position": {
         "x": 2279.999755859375,
-        "y": 379.99993896484377
+        "y": 381.0001525878906
     }
 }
 
@@ -9943,11 +9943,11 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.5,
+    "m_Value": 0.0,
     "m_FloatType": 1,
     "m_RangeValues": {
         "x": 0.0,
-        "y": 1.0
+        "y": 0.0
     }
 }
 
@@ -10217,8 +10217,8 @@
     "m_ObjectId": "da7147b3fc954c20a194edb372ce51a5",
     "m_Title": "K",
     "m_Position": {
-        "x": 3066.39990234375,
-        "y": -744.800048828125
+        "x": 3066.999755859375,
+        "y": -743.9999389648438
     }
 }
 
@@ -10282,8 +10282,8 @@
     "m_ObjectId": "dceb6172d4f542f181f87f3d278ee378",
     "m_Title": "Water Foam",
     "m_Position": {
-        "x": 2658.39990234375,
-        "y": 860.800048828125
+        "x": 2657.999755859375,
+        "y": 862.0001220703125
     }
 }
 
@@ -11524,8 +11524,8 @@
     "m_ObjectId": "f8606d6e66b44507b2a2a9ab8e4f1b29",
     "m_Title": "Receive Shadow",
     "m_Position": {
-        "x": 5162.39990234375,
-        "y": 1800.7998046875
+        "x": 5161.99951171875,
+        "y": 1801.999755859375
     }
 }
 
@@ -11721,8 +11721,8 @@
     "m_ObjectId": "fc33dce9f0224a5da6586a14b29e1ae4",
     "m_Title": "Gerstner Waves",
     "m_Position": {
-        "x": 2981.599853515625,
-        "y": -1625.60009765625
+        "x": 2981.999755859375,
+        "y": -1624.9998779296875
     }
 }
 

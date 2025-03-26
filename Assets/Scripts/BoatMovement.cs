@@ -6,16 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
- private Keyboard curKeyboard = Keyboard.current;
-  public GameObject canvas;
- private Rigidbody rb;
+
+ public ParticleSystem motorSpray;
+ public GameObject mesh;
+ public GameObject canvas;
  public float speed = 0; 
  public float maxSpeed = 10;
  public float drag = 0f;
+ 
+ private Keyboard curKeyboard = Keyboard.current;
+ private Rigidbody rb;
  private bool isPaused = false;
  private bool isMoving = false;
  private float frequencyIncrement = 0;
- public ParticleSystem motorSpray;
 
  private float lastPause;
     void Start(){
@@ -66,7 +69,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity =  drag*rb.linearVelocity;
         Vector3 newXRotation = Vector3.left * (5.5f*Mathf.Sin((frequencyIncrement-30.5f)/100*Mathf.PI)+4.5f);
         Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
-        transform.eulerAngles = newXRotation + newYRotation;
+        mesh.transform.eulerAngles = newXRotation + newYRotation;
         // if(isMoving){
         //     frequencyIncrement += 1;
         //     Vector3 newXRotation = Vector3.left * (6*Mathf.Sin(frequencyIncrement/100*Mathf.PI)+4);
@@ -82,7 +85,7 @@ public class PlayerController : MonoBehaviour
         //         Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
         //         transform.eulerAngles = newXRotation+newYRotation;
         //     }
-        // }
+        }
     }
 
     public void onResume(){
