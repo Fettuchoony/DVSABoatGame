@@ -67,22 +67,6 @@ public class PlayerController : MonoBehaviour
         Vector3 newXRotation = Vector3.left * (5.5f*Mathf.Sin((frequencyIncrement-30.5f)/100*Mathf.PI)+4.5f);
         Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
         transform.eulerAngles = newXRotation + newYRotation;
-        // if(isMoving){
-        //     frequencyIncrement += 1;
-        //     Vector3 newXRotation = Vector3.left * (6*Mathf.Sin(frequencyIncrement/100*Mathf.PI)+4);
-        //     Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
-        //     transform.eulerAngles = newXRotation + newYRotation;
-        //     // if(frequencyIncrement >= 110){
-        //     //     frequencyIncrement = 0;
-        //     // }
-        // }else{
-        //     if(frequencyIncrement != 0 && frequencyIncrement != 110){
-        //         frequencyIncrement -= 0.75f;
-        //         Vector3 newXRotation = Vector3.left * (6*Mathf.Sin(frequencyIncrement/100*Mathf.PI)+4);
-        //         Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
-        //         transform.eulerAngles = newXRotation+newYRotation;
-        //     }
-        // }
     }
 
     public void onResume(){
