@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,17 +16,25 @@ public class PlayerController : MonoBehaviour
  private bool isPaused = false;
  private bool isMoving = false;
  private float frequencyIncrement = 0;
+<<<<<<< Updated upstream
  public ParticleSystem motorSpray;
  private Transform propeller;
+=======
+ private PlayerInventory pInventory;
+>>>>>>> Stashed changes
 
  private float lastPause;
     void Start(){
         rb = GetComponent<Rigidbody>();
         canvas.SetActive(false);
+<<<<<<< Updated upstream
         Transform propObj = transform.Find("Propeller");
         if (propeller != null) {
             propeller = propObj.transform;
         }
+=======
+        pInventory = GetComponent<PlayerInventory>();
+>>>>>>> Stashed changes
     }
 
     void Update(){
@@ -34,6 +43,7 @@ public class PlayerController : MonoBehaviour
                 isMoving = true;
                 if(Mathf.Pow(rb.linearVelocity.x,2f)+Mathf.Pow(rb.linearVelocity.z,2f) <= Mathf.Pow(maxSpeed,2)){
                     rb.AddForce(1 * transform.forward * speed);
+                    Debug.Log(rb.linearVelocity);
                 }
             }else if(curKeyboard.sKey.isPressed){
                 rb.AddForce(0.5f*transform.forward*-speed/4);
@@ -55,6 +65,15 @@ public class PlayerController : MonoBehaviour
      
     }
     private void FixedUpdate(){
+<<<<<<< Updated upstream
+=======
+        if (motorSpray != null) {
+            float x = rb.linearVelocity.x;
+            float z = rb.linearVelocity.z;
+            var emission = motorSpray.emission;
+            emission.rate = Mathf.Sqrt(x*x + z*z);
+        }
+>>>>>>> Stashed changes
         // motorSpray.transform.position = propeller.position;
         // motorSpray.transform.rotation = propeller.rotation;
         if(isMoving){
@@ -66,7 +85,12 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity =  drag*rb.linearVelocity;
         Vector3 newXRotation = Vector3.left * (5.5f*Mathf.Sin((frequencyIncrement-30.5f)/100*Mathf.PI)+4.5f);
         Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
+<<<<<<< Updated upstream
         transform.eulerAngles = newXRotation + newYRotation;
+=======
+        mesh.transform.eulerAngles = newXRotation + newYRotation;
+        
+>>>>>>> Stashed changes
     }
 
     public void onResume(){
@@ -83,7 +107,7 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     private void escapeMenu(){
-    if(isPaused){
+        if(isPaused){
             Time.timeScale = 1;
         }else{
             Time.timeScale = 0;
