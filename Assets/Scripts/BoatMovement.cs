@@ -28,6 +28,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update(){
+        
+     
+    }
+    private void FixedUpdate(){
         if(!isPaused){
             if(curKeyboard.wKey.isPressed){
                 isMoving = true;
@@ -52,9 +56,9 @@ public class PlayerController : MonoBehaviour
             lastPause = Time.realtimeSinceStartup;
             escapeMenu();
         }
-     
-    }
-    private void FixedUpdate(){
+
+
+
         // motorSpray.transform.position = propeller.position;
         // motorSpray.transform.rotation = propeller.rotation;
         if(isMoving){
