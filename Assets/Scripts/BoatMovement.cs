@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,24 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-
- public ParticleSystem motorSpray;
- public GameObject mesh;
- public GameObject canvas;
+ private Keyboard curKeyboard = Keyboard.current;
+  public GameObject canvas;
+ private Rigidbody rb;
  public float speed = 0; 
  public float maxSpeed = 10;
  public float drag = 0f;
- 
- private Keyboard curKeyboard = Keyboard.current;
- private Rigidbody rb;
+
+ public Transform mesh;
  private bool isPaused = false;
  private bool isMoving = false;
  private float frequencyIncrement = 0;
+ private PlayerInventory pInventory;
 
  private float lastPause;
     void Start(){
         rb = GetComponent<Rigidbody>();
         canvas.SetActive(false);
+        pInventory = GetComponent<PlayerInventory>();
     }
 
     void Update(){
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
                 isMoving = true;
                 if(Mathf.Pow(rb.linearVelocity.x,2f)+Mathf.Pow(rb.linearVelocity.z,2f) <= Mathf.Pow(maxSpeed,2)){
                     rb.AddForce(1 * transform.forward * speed);
+                    Debug.Log(rb.linearVelocity);
                 }
             }else if(curKeyboard.sKey.isPressed){
                 rb.AddForce(0.5f*transform.forward*-speed/4);
@@ -53,11 +55,6 @@ public class PlayerController : MonoBehaviour
      
     }
     private void FixedUpdate(){
-        if (motorSpray != null) {
-            float x = rb.linearVelocity.x;
-            float z = rb.linearVelocity.z;
-            var emission = motorSpray.emission;
-            emission.rate = Mathf.Sqrt(x*x + z*z);
         // motorSpray.transform.position = propeller.position;
         // motorSpray.transform.rotation = propeller.rotation;
         if(isMoving){
@@ -66,27 +63,11 @@ public class PlayerController : MonoBehaviour
         }else{
             frequencyIncrement -= 0.75f;
         }
-        rb.linearVelocity =  drag*rb.linearVelocity;
-        Vector3 newXRotation = Vector3.forward * (5.5f*Mathf.Sin((frequencyIncrement-30.5f)/100*Mathf.PI)+4.5f);
-        Vector3 newZRotation = Vector3.up * transform.eulerAngles.y + (90f * Vector3.up);
-        mesh.transform.eulerAngles = newXRotation + newZRotation;
-        // if(isMoving){
-        //     frequencyIncrement += 1;
-        //     Vector3 newXRotation = Vector3.left * (6*Mathf.Sin(frequencyIncrement/100*Mathf.PI)+4);
-        //     Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
-        //     transform.eulerAngles = newXRotation + newYRotation;
-        //     // if(frequencyIncrement >= 110){
-        //     //     frequencyIncrement = 0;
-        //     // }
-        // }else{
-        //     if(frequencyIncrement != 0 && frequencyIncrement != 110){
-        //         frequencyIncrement -= 0.75f;
-        //         Vector3 newXRotation = Vector3.left * (6*Mathf.Sin(frequencyIncrement/100*Mathf.PI)+4);
-        //         Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
-        //         transform.eulerAngles = newXRotation+newYRotation;
-        //     }
+            rb.linearVelocity =  drag*rb.linearVelocity;
+            Vector3 newXRotation = Vector3.forward * (5.5f*Mathf.Sin((frequencyIncrement-30.5f)/100*Mathf.PI)+4.5f);
+            Vector3 newZRotation = Vector3.up * transform.eulerAngles.y + (90f * Vector3.up);
+            mesh.transform.eulerAngles = newXRotation + newZRotation;
         }
-    }
 
     public void onResume(){
         if(Time.realtimeSinceStartup-lastPause > 0.5f){
@@ -102,7 +83,7 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     private void escapeMenu(){
-    if(isPaused){
+        if(isPaused){
             Time.timeScale = 1;
         }else{
             Time.timeScale = 0;
