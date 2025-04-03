@@ -67,9 +67,9 @@ public class PlayerController : MonoBehaviour
             frequencyIncrement -= 0.75f;
         }
         rb.linearVelocity =  drag*rb.linearVelocity;
-        Vector3 newXRotation = Vector3.left * (5.5f*Mathf.Sin((frequencyIncrement-30.5f)/100*Mathf.PI)+4.5f);
-        Vector3 newYRotation = Vector3.up * transform.eulerAngles.y;
-        mesh.transform.eulerAngles = newXRotation + newYRotation;
+        Vector3 newXRotation = Vector3.forward * (5.5f*Mathf.Sin((frequencyIncrement-30.5f)/100*Mathf.PI)+4.5f);
+        Vector3 newZRotation = Vector3.up * transform.eulerAngles.y + (90f * Vector3.up);
+        mesh.transform.eulerAngles = newXRotation + newZRotation;
         // if(isMoving){
         //     frequencyIncrement += 1;
         //     Vector3 newXRotation = Vector3.left * (6*Mathf.Sin(frequencyIncrement/100*Mathf.PI)+4);
