@@ -52,7 +52,7 @@ public class PlayerInventory : MonoBehaviour
         //The current cost of the maxSpeed upgrade
         upgradeCosts["maxSpeed"] = 5;
         // The set 4 maxSpeed upgrades
-        listOfUpgrades["maxSpeed"] = new float[4]{10,12,15,23};
+        listOfUpgrades["maxSpeed"] = new float[4]{10f,13f,20f,27f};
 
     
     }
@@ -76,6 +76,7 @@ public class PlayerInventory : MonoBehaviour
             maxSpeedButton.text = "maxSpeedUpgrade" + upgradeCosts["maxSpeed"];
             pc.rb.maxLinearVelocity = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
             pc.maxSpeed = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
+            Debug.Log(currUpgrades["maxSpeed"]);
         }
     }
 
