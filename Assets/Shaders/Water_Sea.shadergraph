@@ -241,9 +241,6 @@
             "m_Id": "91c85b099f4c4c92b3ba7d20120b10e6"
         },
         {
-            "m_Id": "800654968ed248e38218628f4516471f"
-        },
-        {
             "m_Id": "84ddba0b1cf04079b6cf5edb1bcfc556"
         },
         {
@@ -338,6 +335,9 @@
         },
         {
             "m_Id": "0b42a60f5ddd4835870a575e9b20794c"
+        },
+        {
+            "m_Id": "a44b528f16ac4ab9a1a8225734d5547e"
         }
     ],
     "m_GroupDatas": [
@@ -1740,10 +1740,10 @@
                 "m_Id": "91c85b099f4c4c92b3ba7d20120b10e6"
             },
             {
-                "m_Id": "800654968ed248e38218628f4516471f"
+                "m_Id": "84ddba0b1cf04079b6cf5edb1bcfc556"
             },
             {
-                "m_Id": "84ddba0b1cf04079b6cf5edb1bcfc556"
+                "m_Id": "a44b528f16ac4ab9a1a8225734d5547e"
             }
         ]
     },
@@ -1998,8 +1998,8 @@
     "m_ObjectId": "08bc5fdf02f24ed9b9712cc96a7cd9f4",
     "m_Title": "Water Depth Fade",
     "m_Position": {
-        "x": 3797.99951171875,
-        "y": 387.0001220703125
+        "x": 3797.599853515625,
+        "y": 386.4000244140625
     }
 }
 
@@ -3508,8 +3508,8 @@
     "m_ObjectId": "2c084c5dd51f4025aac9445aa6e2dc12",
     "m_Title": "Water Reflection",
     "m_Position": {
-        "x": 3008.999755859375,
-        "y": -137.99986267089845
+        "x": 3008.800048828125,
+        "y": -139.20001220703126
     }
 }
 
@@ -4955,6 +4955,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "561387da86ce4eed86783e49bd2045c5",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Alpha",
+    "m_StageCapability": 2,
+    "m_Value": 1.0,
+    "m_DefaultValue": 1.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.TimeNode",
     "m_ObjectId": "5720176f98ae42ec84f3623274571af1",
     "m_Group": {
@@ -5249,7 +5264,7 @@
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
     "m_RenderFace": 0,
-    "m_AlphaClip": false,
+    "m_AlphaClip": true,
     "m_CastShadows": true,
     "m_ReceiveShadows": true,
     "m_DisableTint": false,
@@ -6516,40 +6531,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "800654968ed248e38218628f4516471f",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Alpha",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "9a63a223dbf646859fed99731ec3d847"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "8220ea799db17b84bf6e1209ab5fb5b1",
     "m_Id": 1,
@@ -7221,8 +7202,8 @@
     "m_ObjectId": "9230d113ac5c4814833997f437aaf1ff",
     "m_Title": "Big semitransparent foam lines",
     "m_Position": {
-        "x": 2869.999755859375,
-        "y": 2098.99951171875
+        "x": 2869.599853515625,
+        "y": 2097.599609375
     }
 }
 
@@ -7366,27 +7347,12 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "9a63a223dbf646859fed99731ec3d847",
-    "m_Id": 0,
-    "m_DisplayName": "Alpha",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Alpha",
-    "m_StageCapability": 2,
-    "m_Value": 1.0,
-    "m_DefaultValue": 1.0,
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.GroupData",
     "m_ObjectId": "9abe6fba8ae6472ba8ee5bf7cf45f85a",
     "m_Title": "Distance fading effect",
     "m_Position": {
         "x": 2279.999755859375,
-        "y": 381.0001525878906
+        "y": 379.99993896484377
     }
 }
 
@@ -7812,6 +7778,40 @@
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "a44b528f16ac4ab9a1a8225734d5547e",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Alpha",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "561387da86ce4eed86783e49bd2045c5"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
 }
 
 {
@@ -10217,8 +10217,8 @@
     "m_ObjectId": "da7147b3fc954c20a194edb372ce51a5",
     "m_Title": "K",
     "m_Position": {
-        "x": 3066.999755859375,
-        "y": -743.9999389648438
+        "x": 3066.39990234375,
+        "y": -744.800048828125
     }
 }
 
@@ -10282,8 +10282,8 @@
     "m_ObjectId": "dceb6172d4f542f181f87f3d278ee378",
     "m_Title": "Water Foam",
     "m_Position": {
-        "x": 2657.999755859375,
-        "y": 862.0001220703125
+        "x": 2658.39990234375,
+        "y": 860.800048828125
     }
 }
 
@@ -11524,8 +11524,8 @@
     "m_ObjectId": "f8606d6e66b44507b2a2a9ab8e4f1b29",
     "m_Title": "Receive Shadow",
     "m_Position": {
-        "x": 5161.99951171875,
-        "y": 1801.999755859375
+        "x": 5162.39990234375,
+        "y": 1800.7998046875
     }
 }
 
@@ -11721,8 +11721,8 @@
     "m_ObjectId": "fc33dce9f0224a5da6586a14b29e1ae4",
     "m_Title": "Gerstner Waves",
     "m_Position": {
-        "x": 2981.999755859375,
-        "y": -1624.9998779296875
+        "x": 2981.599853515625,
+        "y": -1625.60009765625
     }
 }
 
