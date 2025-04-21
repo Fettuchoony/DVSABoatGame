@@ -1998,8 +1998,8 @@
     "m_ObjectId": "08bc5fdf02f24ed9b9712cc96a7cd9f4",
     "m_Title": "Water Depth Fade",
     "m_Position": {
-        "x": 3797.599853515625,
-        "y": 386.4000244140625
+        "x": 3798.0,
+        "y": 387.0
     }
 }
 
@@ -3508,8 +3508,8 @@
     "m_ObjectId": "2c084c5dd51f4025aac9445aa6e2dc12",
     "m_Title": "Water Reflection",
     "m_Position": {
-        "x": 3008.800048828125,
-        "y": -139.20001220703126
+        "x": 3009.0,
+        "y": -138.0
     }
 }
 
@@ -7202,8 +7202,8 @@
     "m_ObjectId": "9230d113ac5c4814833997f437aaf1ff",
     "m_Title": "Big semitransparent foam lines",
     "m_Position": {
-        "x": 2869.599853515625,
-        "y": 2097.599609375
+        "x": 2870.0,
+        "y": 2099.0
     }
 }
 
@@ -7337,7 +7337,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 200.0,
+    "m_Value": 451.1000061035156,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -7351,8 +7351,8 @@
     "m_ObjectId": "9abe6fba8ae6472ba8ee5bf7cf45f85a",
     "m_Title": "Distance fading effect",
     "m_Position": {
-        "x": 2279.999755859375,
-        "y": 379.99993896484377
+        "x": 2280.0,
+        "y": 381.0
     }
 }
 
@@ -10217,8 +10217,8 @@
     "m_ObjectId": "da7147b3fc954c20a194edb372ce51a5",
     "m_Title": "K",
     "m_Position": {
-        "x": 3066.39990234375,
-        "y": -744.800048828125
+        "x": 3067.0,
+        "y": -744.0
     }
 }
 
@@ -10282,8 +10282,8 @@
     "m_ObjectId": "dceb6172d4f542f181f87f3d278ee378",
     "m_Title": "Water Foam",
     "m_Position": {
-        "x": 2658.39990234375,
-        "y": 860.800048828125
+        "x": 2658.0,
+        "y": 862.0
     }
 }
 
@@ -10873,7 +10873,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.20000000298023225,
+    "m_Value": 0.009999999776482582,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -11524,8 +11524,8 @@
     "m_ObjectId": "f8606d6e66b44507b2a2a9ab8e4f1b29",
     "m_Title": "Receive Shadow",
     "m_Position": {
-        "x": 5162.39990234375,
-        "y": 1800.7998046875
+        "x": 5162.0,
+        "y": 1802.0
     }
 }
 
@@ -11721,8 +11721,8 @@
     "m_ObjectId": "fc33dce9f0224a5da6586a14b29e1ae4",
     "m_Title": "Gerstner Waves",
     "m_Position": {
-        "x": 2981.599853515625,
-        "y": -1625.60009765625
+        "x": 2982.0,
+        "y": -1625.0
     }
 }
 
