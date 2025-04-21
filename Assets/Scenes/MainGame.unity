@@ -1120,12 +1120,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8926422da242c42a368a8d87ee50b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  motorSpray: {fileID: 0}
+  mesh: {fileID: 291643855}
   canvas: {fileID: 1510714344}
   rb: {fileID: 0}
   speed: 2
   maxSpeed: 10
   drag: 0.97
-  mesh: {fileID: 291643855}
 --- !u!114 &666739298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7773,10 +7774,10 @@ Terrain:
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: fc272eb6e750e1b468d13770c74519e0, type: 2}
   m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 510
+  m_TreeBillboardDistance: 197
+  m_TreeCrossFadeLength: 200
+  m_TreeMaximumFullLODCount: 0
+  m_DetailObjectDistance: 574
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
@@ -8142,3 +8143,4 @@ SceneRoots:
   - {fileID: 1722926466}
   - {fileID: 2147203608}
   - {fileID: 256162582}
+  - {fileID: 2786975916753425956}
