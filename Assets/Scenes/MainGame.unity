@@ -8086,6 +8086,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1359770419487105929, guid: 8f2d09703f6770c4b9b08b21a537b961, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: de71cc0da6b68784ea9f1f9deed80cac, type: 2}
     - target: {fileID: 5294434218220693921, guid: 8f2d09703f6770c4b9b08b21a537b961, type: 3}
       propertyPath: openShopUI
       value: 
