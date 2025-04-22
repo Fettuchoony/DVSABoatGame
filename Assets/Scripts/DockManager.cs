@@ -5,6 +5,8 @@ public class DockManager : MonoBehaviour
 
     public GameObject openShopUI;
 
+    public GameObject shopButton;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,6 +19,10 @@ public class DockManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnTriggerEnter () {
+        shopButton.SetActive(true);
     }
 
     void OnTriggerStay () {

@@ -12,6 +12,8 @@ public class PlayerInventory : MonoBehaviour
 
     public GameObject tempShopUI;
 
+    public GameObject shopButton;
+
     private PlayerController pc;
 
     public Dictionary<string, int> currUpgrades;
@@ -27,8 +29,8 @@ public class PlayerInventory : MonoBehaviour
         UpdateCurrency(0);
         pc = GetComponent<PlayerController>();
         InitUpgrades();
-        speedButton.text = "speedUpgrade:" +  upgradeCosts["speed"];
-        maxSpeedButton.text = "maxSpeedUpgrade" + upgradeCosts["maxSpeed"];
+        speedButton.text = "Top Speed Level:" +  upgradeCosts["speed"];
+        maxSpeedButton.text = "Acceleration Level: " + upgradeCosts["maxSpeed"];
     }
 
     private void UpdateCurrency(int deltaCurrency){
@@ -64,7 +66,7 @@ public class PlayerInventory : MonoBehaviour
             UpdateCurrency(- upgradeCosts["speed"]);
             upgradeCosts["speed"] += 2+currUpgrades["speed"];
             currUpgrades["speed"] += 1;
-            speedButton.text = "speedUpgrade:" +  upgradeCosts["speed"];
+            speedButton.text = "Top Speed Level:" +  upgradeCosts["speed"];
             pc.speed = listOfUpgrades["speed"][currUpgrades["speed"]];
         }
     }
@@ -73,7 +75,7 @@ public class PlayerInventory : MonoBehaviour
             UpdateCurrency(-upgradeCosts["maxSpeed"]);
             currUpgrades["maxSpeed"] += 1;
             upgradeCosts["maxSpeed"] *= 2;
-            maxSpeedButton.text = "maxSpeedUpgrade" + upgradeCosts["maxSpeed"];
+            maxSpeedButton.text = "Acceleration Level: " + upgradeCosts["maxSpeed"];
             pc.rb.maxLinearVelocity = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
             pc.maxSpeed = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
             Debug.Log(currUpgrades["maxSpeed"]);
@@ -82,6 +84,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void tempShopIcon(){
         tempShopUI.SetActive(!tempShopUI.activeSelf);
+        shopButton.SetActive(false);
     }
 
 }
