@@ -1355,6 +1355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openShopUI: {fileID: 0}
+  shopButton: {fileID: 0}
+  shopUI: {fileID: 0}
 --- !u!1 &6953184918454767917
 GameObject:
   m_ObjectHideFlags: 0

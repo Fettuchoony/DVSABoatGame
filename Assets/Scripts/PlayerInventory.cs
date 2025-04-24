@@ -10,10 +10,6 @@ public class PlayerInventory : MonoBehaviour
 
     public TextMeshProUGUI maxSpeedButton;
 
-    public GameObject tempShopUI;
-
-    public GameObject shopButton;
-
     private PlayerController pc;
 
     public Dictionary<string, int> currUpgrades;
@@ -66,7 +62,7 @@ public class PlayerInventory : MonoBehaviour
             UpdateCurrency(- upgradeCosts["speed"]);
             upgradeCosts["speed"] += 2+currUpgrades["speed"];
             currUpgrades["speed"] += 1;
-            speedButton.text = "Top Speed Level:" +  upgradeCosts["speed"];
+            speedButton.text = "Top Speed Cost:" +  upgradeCosts["speed"];
             pc.speed = listOfUpgrades["speed"][currUpgrades["speed"]];
         }
     }
@@ -75,16 +71,10 @@ public class PlayerInventory : MonoBehaviour
             UpdateCurrency(-upgradeCosts["maxSpeed"]);
             currUpgrades["maxSpeed"] += 1;
             upgradeCosts["maxSpeed"] *= 2;
-            maxSpeedButton.text = "Acceleration Level: " + upgradeCosts["maxSpeed"];
+            maxSpeedButton.text = "Acceleration Cost: " + upgradeCosts["maxSpeed"];
             pc.rb.maxLinearVelocity = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
             pc.maxSpeed = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
             Debug.Log(currUpgrades["maxSpeed"]);
         }
     }
-
-    public void tempShopIcon(){
-        tempShopUI.SetActive(!tempShopUI.activeSelf);
-        shopButton.SetActive(false);
-    }
-
 }
