@@ -943,9 +943,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666739300}
-        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
-        m_MethodName: tempShopIcon
+      - m_Target: {fileID: 863071146}
+        m_TargetAssemblyTypeName: DockManager, Assembly-CSharp
+        m_MethodName: shopChangeState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1200,8 +1200,6 @@ MonoBehaviour:
   currencyText: {fileID: 706300220}
   speedButton: {fileID: 1764343003}
   maxSpeedButton: {fileID: 805331490}
-  tempShopUI: {fileID: 847652468}
-  shopButton: {fileID: 530606240}
 --- !u!1 &706300218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,7 +1393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Acceleration Level: 1'
+  m_text: 'Top Speed Cost: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1620,6 +1618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openShopUI: {fileID: 256162578}
   shopButton: {fileID: 530606240}
+  shopUI: {fileID: 847652468}
 --- !u!1 &882787838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,9 +2239,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666739300}
-        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
-        m_MethodName: tempShopIcon
+      - m_Target: {fileID: 863071146}
+        m_TargetAssemblyTypeName: DockManager, Assembly-CSharp
+        m_MethodName: shopChangeState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7370,7 +7369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Top Speed Level: 1'
+  m_text: 'Acceleration Cost: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
             lastPause = Time.realtimeSinceStartup;
             escapeMenu();
         }
+        Debug.Log(rb.linearVelocity);
      
     }
     private void FixedUpdate(){
