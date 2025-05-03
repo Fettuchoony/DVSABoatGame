@@ -42,8 +42,8 @@ public class PlayerInventory : MonoBehaviour
         currUpgrades["speed"] = 0;
         // The current cost of the speed upgrade
         upgradeCosts["speed"] = 1;
-        // The set 6 speed upgrades
-        listOfUpgrades["speed"] = new float[6]{2f,3f,5f,8f,10f,13f};
+        // The set 7 speed upgrades
+        listOfUpgrades["speed"] = new float[7]{2f,3f,5f,8f,10f,13f,30f};
 
         // The current upgrade level of maxSpeed
         currUpgrades["maxSpeed"] = 0;
@@ -59,7 +59,7 @@ public class PlayerInventory : MonoBehaviour
         // First check if player can purchase upgrade
         // Second check if the current upgrade doesnt pass the list of upgrades
         if(upgradeCosts["speed"] <= currency && currUpgrades["speed"] < listOfUpgrades["speed"].Length-1){
-            UpdateCurrency(- upgradeCosts["speed"]);
+            UpdateCurrency(-upgradeCosts["speed"]);
             upgradeCosts["speed"] += 2+currUpgrades["speed"];
             currUpgrades["speed"] += 1;
             speedButton.text = "Top Speed Cost:" +  upgradeCosts["speed"];
@@ -72,7 +72,6 @@ public class PlayerInventory : MonoBehaviour
             currUpgrades["maxSpeed"] += 1;
             upgradeCosts["maxSpeed"] *= 2;
             maxSpeedButton.text = "Acceleration Cost: " + upgradeCosts["maxSpeed"];
-            pc.rb.maxLinearVelocity = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
             pc.maxSpeed = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
             Debug.Log(currUpgrades["maxSpeed"]);
         }

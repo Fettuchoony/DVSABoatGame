@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -23,13 +24,23 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         canvas.SetActive(false);
         pInventory = GetComponent<PlayerInventory>();
-        rb.maxLinearVelocity = 10f;
     }
 
     void Update(){
         if(!isPaused){
             if(curKeyboard.wKey.isPressed){
-                rb.AddForce(1 * transform.forward * speed);
+                float currVelocity = MathF.Sqrt(Mathf.Pow(rb.linearVelocity.x,2)+Mathf.Pow(rb.linearVelocity.z,2));
+                if(currVelocity <= maxSpeed){
+                    // if(currVelocity + Mathf.Sqrt(speed) > maxSpeed){
+                    //     rb.AddForce(transform.forward*(maxSpeed-currVelocity));
+                    //     Debug.Log("Ran with the If: "+currVelocity);
+                    // }else{
+                    //     rb.AddForce(transform.forward * speed);
+                    //     Debug.Log("Ran with Else: "+currVelocity);
+                    // }
+                    rb.AddForce(transform.forward * speed);
+                    Debug.Log("Speed: "+currVelocity);
+                }
             }else if(curKeyboard.sKey.isPressed){
                 rb.AddForce(0.5f*transform.forward*-speed/4);
             }
@@ -44,8 +55,6 @@ public class PlayerController : MonoBehaviour
             lastPause = Time.realtimeSinceStartup;
             escapeMenu();
         }
-        Debug.Log(rb.linearVelocity);
-     
     }
     private void FixedUpdate(){
         // return;
