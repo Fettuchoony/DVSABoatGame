@@ -171,10 +171,10 @@ MonoBehaviour:
   gravity: -13
   collisionDamping: 0.5
   smoothingRadius: 0.175
-  targetDensity: 234
+  targetDensity: 401.5
   pressureMultiplier: 225
   nearPressureMultiplier: 5
-  viscosityStrength: 0
+  viscosityStrength: 0.22
   boundsSize: {x: 43.1, y: 23.86}
   obstacleSize: {x: 1.3, y: 1.69}
   obstacleCentre: {x: -0.6, y: -6.9}
@@ -221,17 +221,17 @@ MonoBehaviour:
   scale: 0.07
   colourMap:
     serializedVersion: 2
-    key0: {r: 0.11534355, g: 0.2537607, b: 0.9056604, a: 1}
-    key1: {r: 0.6273585, g: 0.8659867, b: 1, a: 1}
-    key2: {r: 1, g: 1, b: 1, a: 0}
+    key0: {r: 0.26415092, g: 0.2388157, b: 0.18814524, a: 1}
+    key1: {r: 0.33962262, g: 0.30876315, b: 0.24190101, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 59607
-    ctime2: 65535
+    ctime1: 65535
+    ctime2: 0
     ctime3: 0
     ctime4: 0
     ctime5: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 2
     m_ColorSpace: -1
-    m_NumColorKeys: 3
+    m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   gradientResolution: 64
   velocityDisplayMax: 15
