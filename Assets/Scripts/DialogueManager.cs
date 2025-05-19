@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void toggleDialogue(bool enabled) {
-        boxText.SetActive(enabled);
+        // boxText.SetActive(enabled);
     }
 
     public void changeDialogueID(int ID) {
