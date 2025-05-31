@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
  public Rigidbody rb;
  public float speed = 0; 
  public float maxSpeed = 10;
- public Vector3 drag;
+ public float drag;
 
  private Keyboard curKeyboard = Keyboard.current;
  private bool isPaused = false;
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         float frequencyIncrementIncrement = Mathf.Sqrt(rb.linearVelocity.x*rb.linearVelocity.x+rb.linearVelocity.z*rb.linearVelocity.z)/10f;
         frequencyIncrement += Mathf.Clamp(frequencyIncrementIncrement,0.5f,10f);
 
-        rb.linearVelocity = Vector3.Dot(Vector3.forward, rb.linearVelocity.normalized) * rb.linearVelocity;
+        rb.linearVelocity = drag*rb.linearVelocity;
         //5.5*sin(x/100*pi)+4.5
         Vector3 newZRotation = Vector3.back * (5.5f*Mathf.Sin((frequencyIncrement-30.50178f)/100*Mathf.PI)+4.5f);
 
