@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
  public Rigidbody rb;
  public float speed = 0; 
  public float maxSpeed = 10;
- public float drag;
+ public float drag = 0.97f;
 
  private Keyboard curKeyboard = Keyboard.current;
  private bool isPaused = false;
@@ -31,15 +31,7 @@ public class PlayerController : MonoBehaviour
             if(curKeyboard.wKey.isPressed){
                 float currVelocity = MathF.Sqrt(Mathf.Pow(rb.linearVelocity.x,2)+Mathf.Pow(rb.linearVelocity.z,2));
                 if(currVelocity <= maxSpeed){
-                    // if(currVelocity + Mathf.Sqrt(speed) > maxSpeed){
-                    //     rb.AddForce(transform.forward*(maxSpeed-currVelocity));
-                    //     Debug.Log("Ran with the If: "+currVelocity);
-                    // }else{
-                    //     rb.AddForce(transform.forward * speed);
-                    //     Debug.Log("Ran with Else: "+currVelocity);
-                    // }
                     rb.AddForce(transform.forward * speed);
-                    Debug.Log("Speed: "+currVelocity);
                 }
             }else if(curKeyboard.sKey.isPressed){
                 rb.AddForce(0.5f*transform.forward*-speed/4);
@@ -70,7 +62,7 @@ public class PlayerController : MonoBehaviour
         float frequencyIncrementIncrement = Mathf.Sqrt(rb.linearVelocity.x*rb.linearVelocity.x+rb.linearVelocity.z*rb.linearVelocity.z)/10f;
         frequencyIncrement += Mathf.Clamp(frequencyIncrementIncrement,0.5f,10f);
 
-        rb.linearVelocity = drag*rb.linearVelocity;
+        rb.linearVelocity =  drag*rb.linearVelocity;
         //5.5*sin(x/100*pi)+4.5
         Vector3 newZRotation = Vector3.back * (5.5f*Mathf.Sin((frequencyIncrement-30.50178f)/100*Mathf.PI)+4.5f);
 

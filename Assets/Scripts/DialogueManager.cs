@@ -5,6 +5,7 @@ using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
+    // The parent for the whole 
     public GameObject textBox;
     public GameObject dialogueObject;
     public float dialogueFadeInSpeed;
@@ -17,8 +18,11 @@ public class DialogueManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Init the Dictionary
         currDialogue = new Dictionary<int, string>();
+        //Get the textmeshpro object of the dialouge gameobject
         dialogue = dialogueObject.GetComponent<TextMeshProUGUI>();
+        //Test text index is set to -1
         currDialogue[-1] = "Edwin I want more Money!!!!";
         toggleDialogue(true, -1);
     }
