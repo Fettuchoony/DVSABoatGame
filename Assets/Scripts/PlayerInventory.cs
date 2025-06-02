@@ -18,7 +18,7 @@ public class PlayerInventory : MonoBehaviour
 
     public Dictionary<string,float[]> listOfUpgrades;
 
-    private int currency = int.MaxValue;
+    private int currency = 0;
     // public int currSpeedUpgrade = 0;
     void Start()
     {
@@ -29,7 +29,7 @@ public class PlayerInventory : MonoBehaviour
         maxSpeedButton.text = "Acceleration Level: " + upgradeCosts["maxSpeed"];
     }
 
-    private void UpdateCurrency(int deltaCurrency){
+    public void UpdateCurrency(int deltaCurrency){
         currency += deltaCurrency;
         currencyText.text = "Coins: "+ currency.ToString();
     }
