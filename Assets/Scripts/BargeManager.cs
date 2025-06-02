@@ -3,8 +3,10 @@ using UnityEngine;
 public class BargeManager : MonoBehaviour
 {
 
-    private PlayerInventory inv;
-
+    public int totalPollutedDirt;
+    public int totalNormalDirt;
+    public int totalFish;
+    public PlayerInventory inv;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,25 +20,42 @@ public class BargeManager : MonoBehaviour
         if (boat == null) {
             Debug.Log("Player Inventory reference is missing... Could not retrieve currency data.");
         }
-        inv.UpdateCurrency(1337);
+
+        GameObject[] contaminants = GameObject.FindGameObjectsWithTag("ContaminatedDirt");
+        if (contaminants == null) {
+            Debug.Log("No contaminants detected!");
+        }
+        totalPollutedDirt = contaminants.Length;
+
+        GameObject[] dirts = GameObject.FindGameObjectsWithTag("CleanDirt");
+        if (dirts == null) {
+            Debug.Log("No normal dirt detected!");
+        }
+        totalNormalDirt = dirts.Length;
+
+        GameObject[] fishes = GameObject.FindGameObjectsWithTag("Fish");
+        if (fishes == null) {
+            Debug.Log("No fish detected!");
+        }
+        totalFish = fishes.Length;
+
+        // Debog test money transfer between scenes
+        // inv.UpdateCurrency(1337);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (totalPollutedDirt <= 0) {
+            endScene();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        string tag = other.tag;
         GameObject.Destroy(other.gameObject);
+    }
 
-        if (tag.Equals("CleanDirt")) {
-            inv.UpdateCurrency(-1);
-        } else if (tag == "ContaminatedDirt"){
-            inv.UpdateCurrency(5);
-        } else if (tag == "Fish") {
-            inv.UpdateCurrency(-10);
-        }
+    private void endScene() {
+        Debug.Log("End Scene!");
     }
 }

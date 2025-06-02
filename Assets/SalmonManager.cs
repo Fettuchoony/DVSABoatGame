@@ -23,10 +23,10 @@ public class SalmonManager : MonoBehaviour
         if (Time.time > nextMove) {
             rb.AddForce(new Vector2(swimSpeed * (Random.value - 0.5f),  swimSpeed * (Random.value - 0.5f)));
             nextMove = Time.time + 5f;
-            Debug.Log(Time.time);
         }
         if (transform.position.y < -3) {
             rb.linearVelocity *= 0.999f;
+            rb.gravityScale = 0.01f;
         } else if (transform.position.y >= -3 && transform.position.y < -2.9f){
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, -rb.linearVelocity.y);
         } else {

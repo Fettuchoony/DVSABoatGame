@@ -8,6 +8,7 @@ TagManager:
   - ContaminatedDirt
   - CleanDirt
   - Fish
+  - Barge
   layers:
   - Default
   - TransparentFX

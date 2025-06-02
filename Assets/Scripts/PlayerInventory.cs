@@ -31,7 +31,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void UpdateCurrency(int deltaCurrency){
         currency += deltaCurrency;
-        currencyText.text = "Coins: "+ currency.ToString();
+        currencyText.text = currency.ToString();
     }
     private void InitUpgrades(){
         currUpgrades = new Dictionary<string, int>();
