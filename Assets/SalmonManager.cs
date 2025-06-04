@@ -22,7 +22,7 @@ public class SalmonManager : MonoBehaviour
     {
         if (Time.time > nextMove) {
             rb.AddForce(new Vector2(swimSpeed * (Random.value - 0.5f),  swimSpeed * (Random.value - 0.5f)));
-            nextMove = Time.time + 5f;
+            nextMove = Time.time + 2f;
         }
         if (transform.position.y < -3) {
             rb.linearVelocity *= 0.999f;

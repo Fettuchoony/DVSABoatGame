@@ -12,8 +12,32 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 178898a741591a64d83d89ddabf3eb66
   - enabled: 1
-    path: Assets/Scenes/Minigame2.unity
+    path: Assets/Scenes/Level1.unity
     guid: bb24a29ee1b50984ea0166c526931b68
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 50f5b3feb58a0b34c966abd7086c561d
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 941841bd1e49e194d873161a134bb67b
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 836a851b7bdd9d54f806af86fade1200
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: a0e1cce330b007a429527bf0f73b88d6
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: bd5b7517777ef9a4e9ddd76ce83eb2fb
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
+    guid: fde524597bc293e4fa9e300594f0c107
+  - enabled: 1
+    path: Assets/Scenes/Level8.unity
+    guid: 941a33ba53560c24d8bf7cca593a9360
+  - enabled: 1
+    path: Assets/Scenes/Level9.unity
+    guid: f56d3964c1f97744999ced4ec24f7f30
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

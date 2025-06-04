@@ -7,6 +7,7 @@ public class PersistenceManager : MonoBehaviour
 
     private void Awake()
     {
+        
         if (Instance != null) {
             Destroy(gameObject);
             return;

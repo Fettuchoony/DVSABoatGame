@@ -5,6 +5,7 @@ public class SceneLoader : MonoBehaviour
 {
 
     public string sceneName;
+    public GameObject enterLevelPrompt;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +20,14 @@ public class SceneLoader : MonoBehaviour
     }
 
     void OnTriggerEnter() {
+        enterLevelPrompt.SetActive(true);
+    }
+
+    public void EnterLevel() {
         SceneManager.LoadScene(sceneName);
+    }
+
+    void OnTriggerExit() {
+        enterLevelPrompt.SetActive(false);
     }
 }

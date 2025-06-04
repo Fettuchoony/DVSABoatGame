@@ -27,18 +27,25 @@ public class WaterPhysics2D : MonoBehaviour
         } 
     }
 
+    public void TriggerScore() {
+        if (tag.Equals("CleanDirt")) {
+            barge.inv.UpdateCurrency(-1);
+        } else if (tag.Equals("ContaminatedDirt")){
+            barge.inv.UpdateCurrency(5);
+        } else if (tag.Equals("Fish")) {
+            barge.inv.UpdateCurrency(-10);
+        }
+    }
+
     // Count submissions of particles
-    void OnDestroy() {
+    void OnDisable() {
 
         if (tag.Equals("CleanDirt")) {
             barge.totalNormalDirt--;
-            barge.inv.UpdateCurrency(-1);
-        } else if (tag == "ContaminatedDirt"){
+        } else if (tag.Equals("ContaminatedDirt")){
             barge.totalPollutedDirt--;
-            barge.inv.UpdateCurrency(5);
-        } else if (tag == "Fish") {
+        } else if (tag.Equals("Fish")) {
             barge.totalFish--;
-            barge.inv.UpdateCurrency(-10);
         }
 
     }

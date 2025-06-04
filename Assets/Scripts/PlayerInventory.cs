@@ -18,11 +18,15 @@ public class PlayerInventory : MonoBehaviour
 
     public Dictionary<string,float[]> listOfUpgrades;
 
-    private int currency = 0;
+    public bool[] completedLevels;
+
+    private static int currency = 0;
     // public int currSpeedUpgrade = 0;
     void Start()
     {
         UpdateCurrency(0);
+        completedLevels = new bool[9];
+        for (int i = 0; i < 9; i++) {completedLevels[i] = false;}
         pc = GetComponent<PlayerController>();
         InitUpgrades();
         speedButton.text = "Top Speed Level:" +  upgradeCosts["speed"];
@@ -55,9 +59,14 @@ public class PlayerInventory : MonoBehaviour
     
     }
 
+    void Update() {
+        // Debug.Log(currency);
+    }
+
     public void speedUpgrade(){
         // First check if player can purchase upgrade
         // Second check if the current upgrade doesnt pass the list of upgrades
+        Debug.Log(currency);
         if(upgradeCosts["speed"] <= currency && currUpgrades["speed"] < listOfUpgrades["speed"].Length-1){
             UpdateCurrency(-upgradeCosts["speed"]);
             upgradeCosts["speed"] += 2+currUpgrades["speed"];
@@ -73,7 +82,7 @@ public class PlayerInventory : MonoBehaviour
             upgradeCosts["maxSpeed"] *= 2;
             maxSpeedButton.text = "Acceleration Cost: " + upgradeCosts["maxSpeed"];
             pc.maxSpeed = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
-            Debug.Log(currUpgrades["maxSpeed"]);
+            // Debug.Log(currUpgrades["maxSpeed"]);
         }
     }
 }

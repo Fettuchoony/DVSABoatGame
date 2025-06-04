@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update(){
-        if(!isPaused){
+        Scene scene = SceneManager.GetActiveScene();
+        if(!isPaused && scene.name.Equals("MainGame")){
             if(curKeyboard.wKey.isPressed){
                 float currVelocity = MathF.Sqrt(Mathf.Pow(rb.linearVelocity.x,2)+Mathf.Pow(rb.linearVelocity.z,2));
                 if(currVelocity <= maxSpeed){
