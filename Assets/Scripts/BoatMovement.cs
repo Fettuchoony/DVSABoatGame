@@ -29,29 +29,6 @@ private Keyboard curKeyboard = Keyboard.current;
         pInventory = GetComponent<PlayerInventory>();
     }
 
-    // void Update(){
-    //     Scene scene = SceneManager.GetActiveScene();
-    //     if(!isPaused && scene.name.Equals("MainGame")){
-    //         if(curKeyboard.wKey.isPressed){
-    //             float currVelocity = MathF.Sqrt(Mathf.Pow(rb.linearVelocity.x,2)+Mathf.Pow(rb.linearVelocity.z,2));
-    //             if(currVelocity <= maxSpeed){
-    //                 rb.AddForce(transform.forward * speed);
-    //             }
-    //         }else if(curKeyboard.sKey.isPressed){
-    //             rb.AddForce(0.5f*transform.forward*-speed/4);
-    //         }
-    //         if(curKeyboard.aKey.isPressed){
-    //             transform.eulerAngles += Vector3.down;
-    //         }
-    //         if(curKeyboard.dKey.isPressed){
-    //             transform.eulerAngles += Vector3.up;
-    //         }
-    //     }
-    //     if(curKeyboard.escapeKey.isPressed && (Time.realtimeSinceStartup - lastPause > 0.2f)){
-    //         lastPause = Time.realtimeSinceStartup;
-    //         escapeMenu();
-    //     }
-    // }
     void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
@@ -85,6 +62,7 @@ private Keyboard curKeyboard = Keyboard.current;
             {
                 rb.AddForce(transform.forward * boatMovementVector * speed);
             }
+            if (rb.linearVelocity.magnitude > maxSpeed) rb.linearVelocity = maxSpeed * rb.linearVelocity.normalized;
             transform.eulerAngles += Vector3.up * boatRotationVector;
         }
 
@@ -92,14 +70,15 @@ private Keyboard curKeyboard = Keyboard.current;
 
 
         //For the wave simulation of the boat.
-        float frequencyIncrementIncrement = Mathf.Sqrt(rb.linearVelocity.x * rb.linearVelocity.x + rb.linearVelocity.z * rb.linearVelocity.z) / 10f;
-        frequencyIncrement += Mathf.Clamp(frequencyIncrementIncrement, 0.5f, 10f);
+        // float frequencyIncrementIncrement = Mathf.Sqrt(rb.linearVelocity.x * rb.linearVelocity.x + rb.linearVelocity.z * rb.linearVelocity.z) / 10f;
+        // frequencyIncrement += Mathf.Clamp(frequencyIncrementIncrement, 0.5f, 10f);
 
-        rb.linearVelocity = drag * rb.linearVelocity;
         //5.5*sin(x/100*pi)+4.5
-        Vector3 newZRotation = Vector3.back * (5.5f * Mathf.Sin((frequencyIncrement - 30.50178f) / 100 * Mathf.PI) + 4.5f);
-        Vector3 newYRotation = Vector3.up * (transform.eulerAngles.y + 90);
-        mesh.transform.eulerAngles = newZRotation + newYRotation;
+        // Vector3 newZRotation = Vector3.back * (5.5f * Mathf.Sin((frequencyIncrement - 30.50178f) / 100 * Mathf.PI) + 4.5f);
+        // Vector3 newYRotation = Vector3.up * (transform.eulerAngles.y + 90);
+        // mesh.transform.eulerAngles = newZRotation + newYRotation;
+        // Drag of the boat
+        rb.linearVelocity = drag * rb.linearVelocity;
     }
 
     public void onResume(){

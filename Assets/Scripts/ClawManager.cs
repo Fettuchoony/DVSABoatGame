@@ -66,8 +66,11 @@ public class ClawManager : MonoBehaviour
             deltaVelocity += new Vector2(0, rb.linearVelocity.y - clawAccel);
         }
 
-
+        float magnitude = currVel.magnitude;
         int layerMask = LayerMask.GetMask("Terrain");
+        if (translateSpeed < Mathf.Abs(magnitude)) {
+            rb.linearVelocity = translateSpeed * rb.linearVelocity.normalized;
+        }
 
         // rb.linearVelocity = 0.95f * rb.linearVelocity;
         // deltaVelocity = 0.95f * deltaVelocity;
@@ -86,20 +89,23 @@ public class ClawManager : MonoBehaviour
         rb.linearVelocity = rb.linearVelocity + deltaVelocity;
         Vector2 currVel = rb.linearVelocity;
         float magnitude = currVel.magnitude;
-        if (currVel.x > translateSpeed) {
-            rb.linearVelocity = new Vector2(translateSpeed, currVel.y);
-        }
-        if (currVel.x < -translateSpeed) {
-            rb.linearVelocity = new Vector2(-translateSpeed, currVel.y);
-        }
-        if (currVel.y > translateSpeed) {
-            rb.linearVelocity = new Vector2(currVel.x, translateSpeed);
-        }
-        if (currVel.y < -translateSpeed) {
-            rb.linearVelocity = new Vector2(currVel.x, -translateSpeed);
+        // if (currVel.x > translateSpeed) {
+        //     rb.linearVelocity = new Vector2(translateSpeed, currVel.y);
+        // }
+        // if (currVel.x < -translateSpeed) {
+        //     rb.linearVelocity = new Vector2(-translateSpeed, currVel.y);
+        // }
+        // if (currVel.y > translateSpeed) {
+        //     rb.linearVelocity = new Vector2(currVel.x, translateSpeed);
+        // }
+        // if (currVel.y < -translateSpeed) {
+        //     rb.linearVelocity = new Vector2(currVel.x, -translateSpeed);
+        // }
+        if (translateSpeed < Mathf.Abs(magnitude)) {
+            rb.linearVelocity = translateSpeed * rb.linearVelocity.normalized;
         }
         
-        rb.linearVelocity = 0.98f * rb.linearVelocity;
+        
         deltaVelocity = Vector2.zero;
 
         if (Mathf.Abs(rb.linearVelocity.x) < 0.01f ) {
@@ -108,6 +114,7 @@ public class ClawManager : MonoBehaviour
         if (Mathf.Abs(rb.linearVelocity.y) < 0.01f ) {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         }
+        rb.linearVelocity = 0.90f * rb.linearVelocity;
 
         // if (rb.linearVelocity.x > translateSpeed || rb.linearVelocity.x < -translateSpeed) { 
         //     rb.linearVelocity = new Vector2(rb.linearVelocity.x/rb.linearVelocity.x, 0);

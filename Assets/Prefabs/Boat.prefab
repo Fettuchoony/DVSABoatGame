@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 3099225265102590898}
   - component: {fileID: 1313681844834035638}
   - component: {fileID: 4885611633790841005}
+  - component: {fileID: 3026759993510789392}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -178,7 +179,7 @@ Transform:
   - {fileID: 3704523069085243953}
   - {fileID: 1544689346229387670}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.3856797, y: -2.9542718, z: 5.9085436}
 --- !u!33 &2429986936528675329
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -344,6 +345,24 @@ MonoBehaviour:
   currencyText: {fileID: 0}
   speedButton: {fileID: 0}
   maxSpeedButton: {fileID: 0}
+  completedLevels: 
+--- !u!111 &3026759993510789392
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337054111618685835}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 61f2914f7f9aba34cbb6886bf5398d10, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 61f2914f7f9aba34cbb6886bf5398d10, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &2858731122918758012
 GameObject:
   m_ObjectHideFlags: 0
