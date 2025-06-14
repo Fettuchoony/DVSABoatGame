@@ -2133,6 +2133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Claw
       objectReference: {fileID: 0}
+    - target: {fileID: 4659474175332120315, guid: 8bcdafb240e9ef841bd9537663a23e88, type: 3}
+      propertyPath: translateSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
