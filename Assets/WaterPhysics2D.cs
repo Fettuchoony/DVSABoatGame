@@ -3,8 +3,8 @@ using UnityEngine;
 public class WaterPhysics2D : MonoBehaviour
 {
 
-    public Rigidbody2D rb;
-    public BargeManager barge;
+    private Rigidbody2D rb;
+    private BargeManager barge;
     private string tag;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,12 +17,20 @@ public class WaterPhysics2D : MonoBehaviour
             Debug.Log("Water item is missing an rb!");
         }
 
-        barge = GameObject.FindWithTag("Barge").GetComponent<BargeManager>();
+        GameObject bargeObj = GameObject.FindWithTag("Barge");
+        if (bargeObj == null) {
+            Debug.Log("Barge is missing from a pollutant!");
+        }
+        if (bargeObj.GetComponent<BargeManager>() == null) {
+            Debug.Log("Barge component missing  in water physics is missing from a pollutant!");
+        } else {
+            barge = bargeObj.GetComponent<BargeManager>();
+        }
     }
 
     void FixedUpdate()
     {
-        if (transform.position.y < -3) {
+        if (transform.position.y < -3 && !tag.Equals("Fish")) {
             rb.linearVelocity *= 0.8f;
         } 
     }

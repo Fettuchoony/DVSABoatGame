@@ -36,43 +36,43 @@ public class DogDialogue : MonoBehaviour
     }
 
     void OnTriggerEnter() {
-        // compLvls = inv.completedLevels;
-        // // lvl 1
-        // if (currLevel == 1 && !compLvls[currLevel-1]) {
-        //     // Nothing
-        // }
-        // // lvl 2
-        // if (currLevel == 2 && !compLvls[currLevel-1]) {
-        //     Debug.Log("Dog triggered");
-        //     dialogue.toggleDialogue(true, 100 + 10*currLevel);
-        // }
-        // // lvl 3
-        // if (currLevel == 3 && !compLvls[currLevel-1]) {
-        //     dialogue.toggleDialogue(true, 100 + 10*currLevel);
-        // }
-        // // lvl 4
-        // if (currLevel == 4 && !compLvls[currLevel-1]) {
-        //     dialogue.toggleDialogue(true, 100 + 10*currLevel);
-        // }
-        // // lvl 5
-        // if (currLevel == 5 && !compLvls[currLevel-1]) {
-        //     dialogue.toggleDialogue(true, 100 + 10*currLevel);
-        // }
-        // // lvl 6
-        // if (currLevel == 6 && !compLvls[currLevel-1]) {
-        //     dialogue.toggleDialogue(true, 100 + 10*currLevel);
-        // }
-        // // lvl 7
-        // if (currLevel == 7 && !compLvls[currLevel-1]) {
-        //     dialogue.toggleDialogue(true, 100 + 10*currLevel);
-        // }
-        // // lvl 8
-        // if (currLevel == 8 && !compLvls[currLevel-1]) {
-        //     dialogue.toggleDialogue(true, 100 + 10*currLevel);
-        // }
-        // // lvl 9
-        // if (currLevel == 9 && !compLvls[currLevel-1]) {
-        //     dialogue.toggleDialogue(true, 100 + 10*currLevel);
-        // }
+        compLvls = inv.completedLevels;
+        // lvl 1
+        if (currLevel == 1 && !compLvls[currLevel-1]) {
+            // Nothing
+        }
+        // lvl 2
+        if (currLevel == 2 && !compLvls[currLevel-1]) {
+            Debug.Log("Dog triggered");
+            dialogue.toggleDialogue(true, 100 + 10*currLevel);
+        }
+        // lvl 3
+        if (currLevel == 3 && !compLvls[currLevel-1]) {
+            dialogue.toggleDialogue(true, 100 + 10*currLevel);
+        }
+        // lvl 4
+        if (currLevel == 4 && !compLvls[currLevel-1]) {
+            dialogue.toggleDialogue(true, 100 + 10*currLevel);
+        }
+        // lvl 5
+        if (currLevel == 5 && !compLvls[currLevel-1]) {
+            dialogue.toggleDialogue(true, 100 + 10*currLevel);
+        }
+        // lvl 6
+        if (currLevel == 6 && !compLvls[currLevel-1]) {
+            dialogue.toggleDialogue(true, 100 + 10*currLevel);
+        }
+        // lvl 7
+        if (currLevel == 7 && !compLvls[currLevel-1]) {
+            dialogue.toggleDialogue(true, 100 + 10*currLevel);
+        }
+        // lvl 8
+        if (currLevel == 8 && !compLvls[currLevel-1]) {
+            dialogue.toggleDialogue(true, 100 + 10*currLevel);
+        }
+        // lvl 9
+        if (currLevel == 9 && !compLvls[currLevel-1]) {
+            dialogue.toggleDialogue(true, 100 + 10*currLevel);
+        }
     }
 }

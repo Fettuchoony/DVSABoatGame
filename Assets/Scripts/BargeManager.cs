@@ -23,6 +23,7 @@ public class BargeManager : MonoBehaviour
     public TextMeshProUGUI pollutedDirtSynopsis;
     public TextMeshProUGUI fishSynopsis;
     public TextMeshProUGUI totalEgg;
+    public GameObject controlUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -69,6 +70,11 @@ public class BargeManager : MonoBehaviour
         totalFish = fishes.Length;
         initFish = totalFish;
 
+        // GameObject controlUI = GameObject.Find("Controls");
+        // if (controlUI == null) {
+        //     Debug.Log("No controls ui detected!");
+        // }
+
         // Debog test money transfer between scenes
         // inv.UpdateCurrency(1337);
     }
@@ -82,12 +88,16 @@ public class BargeManager : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        other.gameObject.GetComponent<WaterPhysics2D>().TriggerScore();
-        GameObject.Destroy(other.gameObject);
+        // if dirt
+        if (other.gameObject.GetComponent<WaterPhysics2D>() != null) {
+            other.gameObject.GetComponent<WaterPhysics2D>().TriggerScore();
+            GameObject.Destroy(other.gameObject);
+        }
     }
 
     private void EndScene() {
         Debug.Log("End Scene!");
+        controlUI.SetActive(false);
         costsUI.SetActive(false);
         normalDirtSynopsis.text = "" + (initNormalDirt - totalNormalDirt) + " x -1" ;
         pollutedDirtSynopsis.text = "" + (initPollutedDirt - totalPollutedDirt) + " x 10";

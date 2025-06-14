@@ -96,19 +96,21 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -2, y: 4}
+      - {x: 3, y: 4}
+      - {x: 3, y: 4}
+      - {x: -2, y: 4}
     customData: 
     physicsShape:
-    - - {x: -8, y: 9}
-      - {x: -14, y: 4}
-      - {x: -15, y: -3}
-      - {x: 2, y: -15}
-      - {x: 13, y: -10}
-      - {x: 12, y: 0}
-      - {x: 17, y: 6}
-      - {x: 15, y: 14}
-      - {x: 1, y: 18}
-      - {x: -7, y: 17}
+    - - {x: 3, y: -3}
+      - {x: 4, y: 1}
+      - {x: 4, y: 5}
+      - {x: -2, y: 4}
+      - {x: -3, y: 1}
+      - {x: -3, y: -2}
+      - {x: -1, y: -4}
+      - {x: 2, y: -4}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 1537655665
