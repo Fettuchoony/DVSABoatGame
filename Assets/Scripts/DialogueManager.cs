@@ -143,11 +143,11 @@ public class DialogueManager : MonoBehaviour
         currDialogue[120] = "Im smelling some PFAs up ahead!";
         currDialogue[121] = "";
 
-        currDialogue[130] = "As we near the industrial area of Seattle I am detecting higher levels of toxic hevy metals.";
+        currDialogue[130] = "As we near the industrial area of Seattle I am detecting higher levels of toxic heavy metals.";
         currDialogue[131] = "";
 
-        currDialogue[140] = "Smelling for PCBs and PFAs is hard work, but atleast I get treats!";
-        currDialogue[141] = "Anyways, we have ";
+        currDialogue[140] = "I can smell PCBs and other contaminants mixed with the mud at the bottom of the river!";
+        currDialogue[141] = "";
     }
 
 
