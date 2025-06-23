@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 482a065bba73bce4ab08670a083bc190
+guid: f7e6000fa62355547982077aa1a6d1fa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 1
+  spriteTessellationDetail: 0.217
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -97,30 +97,51 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline:
-    - - {x: 3, y: -5}
-      - {x: 4, y: -3}
-      - {x: 5, y: 0}
-      - {x: 5, y: 2}
-      - {x: 5, y: 3}
-      - {x: 4, y: 6}
-      - {x: -2, y: 6}
-      - {x: -4, y: 2}
-      - {x: -4, y: -3}
-      - {x: -2, y: -5}
-      - {x: 0, y: -6}
+    - - {x: 512, y: 7}
+      - {x: 509, y: 6}
+      - {x: 503, y: -5}
+      - {x: 491, y: -34}
+      - {x: 480, y: -44}
+      - {x: 465, y: -49}
+      - {x: 450, y: -51}
+      - {x: 449, y: -52}
+      - {x: 381, y: -52}
+      - {x: 380, y: -51}
+      - {x: 342, y: -45}
+      - {x: 305, y: -36}
+      - {x: 285, y: -32}
+      - {x: 260, y: -28}
+      - {x: 241, y: -22}
+      - {x: 194, y: -16}
+      - {x: 163, y: -12}
+      - {x: 114, y: -6}
+      - {x: 83, y: -2}
+      - {x: 63, y: -1}
+      - {x: 37, y: 1}
+      - {x: 8, y: 4}
+      - {x: -6, y: 5}
+      - {x: -56, y: 6}
+      - {x: -95, y: 8}
+      - {x: -116, y: 10}
+      - {x: -139, y: 12}
+      - {x: -174, y: 13}
+      - {x: -194, y: 14}
+      - {x: -228, y: 17}
+      - {x: -240, y: 19}
+      - {x: -265, y: 23}
+      - {x: -296, y: 27}
+      - {x: -330, y: 32}
+      - {x: -395, y: 41}
+      - {x: -424, y: 47}
+      - {x: -449, y: 49}
+      - {x: -472, y: 49}
+      - {x: -497, y: 51}
+      - {x: -511, y: 51}
+      - {x: -512, y: 50}
+      - {x: -512, y: -64}
+      - {x: 512, y: -64}
     customData: 
-    physicsShape:
-    - - {x: 6, y: -6}
-      - {x: 8, y: -1}
-      - {x: 8, y: 2}
-      - {x: 7, y: 3}
-      - {x: 7, y: 6}
-      - {x: 3, y: 6}
-      - {x: -4, y: 8}
-      - {x: -6, y: 6}
-      - {x: -7, y: -4}
-      - {x: -2, y: -8}
-      - {x: 1, y: -8}
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 1537655665
