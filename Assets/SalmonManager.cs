@@ -1,21 +1,27 @@
 using UnityEngine;
+using Unity.Mathematics;
+using UnityEngine.SocialPlatforms;
 
 public class SalmonManager : MonoBehaviour
 {
 
     private Rigidbody2D rb;
     public int swimSpeed;
+    // public bool isBaitPresent = false;
     private float nextMove = 0f;
+    private BaitManager baitManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        if (rb == null) {
+        baitManager = GameObject.Find("FishBait").GetComponent<BaitManager>();
+        
+        if (rb == null)
+        {
             Debug.Log("Salmon is missing an rb!");
         }
-        Random.InitState((int) transform.position.x);
+        UnityEngine.Random.InitState((int) transform.position.x);
     }
 
     // Update is called once per frame
@@ -23,10 +29,19 @@ public class SalmonManager : MonoBehaviour
 
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         if (Time.time > nextMove) {
-            rb.AddForce(new Vector2(swimSpeed * (Random.value - 0.5f),  swimSpeed * (Random.value - 0.5f)));
-            nextMove = Time.time + 0.1f;
+            if (baitManager.isBaitPresent)
+            {
+                Vector2 position = transform.position;
+                rb.AddForce(new Vector2(math.sign(baitManager.baitXPos - position.x)*5, math.sign(-2 - position.y)));
+            }
+            else
+            {
+                rb.AddForce(new Vector2(swimSpeed * (UnityEngine.Random.value - 0.5f), swimSpeed * (UnityEngine.Random.value - 0.5f)));
+                nextMove = Time.time + 0.1f;
+            }
         }
         if (transform.position.y < -2.9f) {
             rb.linearVelocity *= 0.98f;
