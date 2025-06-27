@@ -15,11 +15,14 @@ public class ClawManager : MonoBehaviour
     [Range(0f, 1f)] public float clawAccel;
 
     private Vector2 deltaVelocity;
+    private BaitManager baitManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        baitManager = GameObject.Find("FishBait").GetComponent<BaitManager>();
+        
         deltaVelocity = Vector2.zero;
     }
 
@@ -43,6 +46,13 @@ public class ClawManager : MonoBehaviour
         // Open
         if (Input.GetKey("d") && rightClaw.eulerAngles.z < 45f) {
             rightClaw.Rotate(new Vector3(0f, 0f, 1f * rotSpeed));
+        }
+
+        // Activate fish bait
+        if (Input.GetKey("e"))
+        {
+            Debug.Log("Ran!!!");
+            baitManager.spawnBait();
         }
 
         Vector2 currVel = rb.linearVelocity;

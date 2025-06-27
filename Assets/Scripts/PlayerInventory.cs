@@ -10,8 +10,6 @@ public class PlayerInventory : MonoBehaviour
 
     public TextMeshProUGUI maxSpeedButton;
 
-    private PlayerController pc;
-
     public Dictionary<string, int> currUpgrades;
 
     public Dictionary<string,int> upgradeCosts;
@@ -19,18 +17,21 @@ public class PlayerInventory : MonoBehaviour
     public Dictionary<string,float[]> listOfUpgrades;
 
     public bool[] completedLevels;
+    private PlayerController pc;
+    private BaitManager baitManager;
 
-    private static int currency = 0;
+    private static int currency = int.MaxValue;
     // public int currSpeedUpgrade = 0;
     void Start()
     {
         UpdateCurrency(0);
         completedLevels = new bool[9];
-        for (int i = 0; i < 9; i++) {completedLevels[i] = false;}
+        for (int i = 0; i < 9; i++) { completedLevels[i] = false; }
         pc = GetComponent<PlayerController>();
         InitUpgrades();
-        speedButton.text = "Top Speed Level:" +  upgradeCosts["speed"];
+        speedButton.text = "Top Speed Level:" + upgradeCosts["speed"];
         maxSpeedButton.text = "Acceleration Level: " + upgradeCosts["maxSpeed"];
+        baitManager = GameObject.Find("FishBait").GetComponent<BaitManager>();
     }
 
     public void UpdateCurrency(int deltaCurrency){
@@ -83,6 +84,15 @@ public class PlayerInventory : MonoBehaviour
             maxSpeedButton.text = "Acceleration Cost: " + upgradeCosts["maxSpeed"];
             pc.maxSpeed = listOfUpgrades["maxSpeed"][currUpgrades["maxSpeed"]];
             // Debug.Log(currUpgrades["maxSpeed"]);
+        }
+    }
+
+    public void fishBaitPurchase()
+    {
+        if (currency >= 7)
+        {
+            UpdateCurrency(-7);
+            baitManager.totalBaits += 1;
         }
     }
 }
