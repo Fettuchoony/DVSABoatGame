@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
     private PlayerController pc;
     private BaitManager baitManager;
 
-    private static int currency = int.MaxValue;
+    private static int currency = 0;
     // public int currSpeedUpgrade = 0;
     void Start()
     {
