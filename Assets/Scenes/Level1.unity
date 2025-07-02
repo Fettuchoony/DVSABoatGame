@@ -499,7 +499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135, y: -19}
+  m_AnchoredPosition: {x: 135, y: -29}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &62026363
@@ -4590,7 +4590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -235, y: 102}
+  m_AnchoredPosition: {x: 322, y: 168}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763257197
@@ -4640,8 +4640,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.59
-  m_fontSizeBase: 19.59
+  m_fontSize: 15.85
+  m_fontSizeBase: 15.85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5322,6 +5322,8 @@ MonoBehaviour:
   totalPollutedDirt: 0
   totalNormalDirt: 0
   totalFish: 0
+  totalChips: 0
+  totalExtinguisher: 0
   levelNum: 1
   costsUI: {fileID: 2096525917}
   inv: {fileID: 0}
@@ -6007,6 +6009,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3953306345825386569, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953306345825386569, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953306345825386569, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953306345825386569, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6101,6 +6115,10 @@ PrefabInstance:
     - target: {fileID: 4682676343726637941, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172878001287444057, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -129,12 +129,40 @@ public class DialogueManager : MonoBehaviour
         currDialogue[32] = "";
 
         currDialogue[40] = "Amazing work!";
-        currDialogue[41] = "Its not just PCBs and heavy metal in this water.";
-        currDialogue[42] = "Theres Arsenic which is a poison.";
-        currDialogue[43] = "Theres cPAHs, which is a chemical that can cause cancer.";
-        currDialogue[44] = "Finally, theres dioxins/Furans... Truly nasty stuff.";
+        currDialogue[41] = "It is not just PCBs in this water.";
+        currDialogue[42] = "There is Arsenic, which is a poison.";
+        currDialogue[43] = "There is cPAHs, which is a chemical that can cause cancer.";
+        currDialogue[44] = "Finally, theres dioxins/Furans... Really nasty stuff.";
         currDialogue[45] = "";
 
+        currDialogue[50] = "The EPA identifies Contaminants of Concern (COCs) by the following:";
+        currDialogue[51] = "Identifies people and ecological resources that could be exposed to contamination found at the site.";
+        currDialogue[52] = "Determines the amount and type of contaminants present";
+        currDialogue[53] = "Determines the human health or ecological effects that could result from contact with the contaminants";
+        currDialogue[54] = "";
+
+        currDialogue[60] = "The EPA declared the Lower Duwamish Waterway a 'Superfund' site in 2001";
+        currDialogue[61] = "The EPA is responsible for administering the cleanup of sediments in the Waterway, and the Department of Ecology is responsible for controlling sources of pollution to the Waterway. The City of Seattle, King County, the Port of Seattle, and the Boeing Company joined together as the Lower Duwamish Waterway Group (LDWG)";
+        currDialogue[62] = "As a group, LDWG stepped forward to complete a comprehensive study, called a Remedial Investigation (RI)";
+        currDialogue[63] = "The remedial investigation identified some of the most contaminated areas where they could start early cleanups, called Early Action Areas (EAAs)";
+        currDialogue[64] = "";
+
+        currDialogue[70] = "The LDW Superfund site encompasses upland sources of contamination as well as contamination within the waterway. The Washington Department of Ecology (Ecology) is the lead agency for control of upland sources ('source control')";
+        currDialogue[71] = "Since LDW became a Superfund site in 2001, five Early Action Area (EAA) cleanups have focused on sediment hotspots (areas of highly contaminated mud on the river bottom)";
+        currDialogue[72] = "The EAAs were predicted to reduce average PCB levels across the waterway by 50%";
+        currDialogue[73] = "Two years of “baseline” sampling of sediment, water, and seafood were completed in 2017 and 2018. Sampling results show average levels in sediment of the four main contaminants for human health have improved.";
+        currDialogue[74] = "";
+
+        currDialogue[80] = "EPA is overseeing the design of the cleanup plan for the southernmost two miles (the “upper reach”) of the waterway and, separately, the approximately 1.5 mile middle reach.";
+        currDialogue[81] = "Over the coming years, EPA expects PRPs (parties potentially responsible for cleanup costs) to design and construct the remaining sediment cleanup and to monitor and maintain the site over time";
+        currDialogue[82] = "As cleanup and source control continue, testing will be repeated to assess progress towards long-term cleanup goals";
+        currDialogue[83] = "";
+
+        currDialogue[90] = "For now the Duwamish River is safe";
+        currDialogue[91] = "We will have to continue monitoring the water entering the river";
+        currDialogue[92] = "The surrounding corporations must be held responsible";
+        currDialogue[93] = "Thank you for your work!";
+        currDialogue[94] = "";
 
 
 
@@ -148,6 +176,22 @@ public class DialogueManager : MonoBehaviour
 
         currDialogue[140] = "I can smell PCBs and other contaminants mixed with the mud at the bottom of the river!";
         currDialogue[141] = "";
+
+        currDialogue[150] = "Old fire extinguishers here! Lots of PFAs!";
+        currDialogue[151] = "";
+
+        currDialogue[160] = "Technology waste here! Including heavy metals!";
+        currDialogue[161] = "";
+
+        currDialogue[170] = "The current here is very strong! Careful!";
+        currDialogue[171] = "";
+
+        currDialogue[180] = "There is a little bit of everything up ahead!";
+        currDialogue[181] = "";
+
+        currDialogue[190] = "This is it, the hardest cleanup site. Goodluck!";
+        currDialogue[191] = "";
+
     }
 
 

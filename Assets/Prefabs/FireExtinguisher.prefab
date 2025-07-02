@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1689619175459170485
+--- !u!1 &3076334608139727420
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4854880801091142515}
-  - component: {fileID: 7847827198717025829}
-  - component: {fileID: 6665562144365286267}
-  - component: {fileID: 7673738340130263360}
-  - component: {fileID: 1887012153609999569}
+  - component: {fileID: 4509094792784319189}
+  - component: {fileID: 5068917355108424415}
+  - component: {fileID: 5301721345746412324}
+  - component: {fileID: 7080930806886265272}
+  - component: {fileID: 4407233498957806598}
   m_Layer: 0
-  m_Name: DirtChunk
-  m_TagString: CleanDirt
+  m_Name: FireExtinguisher
+  m_TagString: Extinguisher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4854880801091142515
+--- !u!4 &4509094792784319189
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689619175459170485}
+  m_GameObject: {fileID: 3076334608139727420}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.62, y: -6.78, z: 0}
+  m_LocalPosition: {x: 4.810645, y: -5.627192, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7847827198717025829
+--- !u!212 &5068917355108424415
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689619175459170485}
+  m_GameObject: {fileID: 3076334608139727420}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,51 +79,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3342b01db47968e47a4a18854c2f6cea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75f4c920a8cb23247943e4af1d7b773a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6665562144365286267
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689619175459170485}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!60 &7673738340130263360
+--- !u!60 &5301721345746412324
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689619175459170485}
+  m_GameObject: {fileID: 3076334608139727420}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -156,34 +129,70 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.008636475, y: 0.16041854}
-      - {x: -0.02054216, y: 0.13217929}
-      - {x: -0.070453644, y: 0.1131649}
-      - {x: -0.08942413, y: 0.08769894}
-      - {x: -0.12897682, y: 0.026967973}
-      - {x: -0.11094186, y: -0.030309707}
-      - {x: -0.08071801, y: -0.06667617}
-      - {x: 0.029916793, y: -0.12064361}
-      - {x: 0.06264973, y: -0.06025981}
-      - {x: 0.07628253, y: -0.015097618}
-      - {x: 0.068855345, y: 0.091005355}
-      - {x: 0.082380295, y: 0.1159983}
-      - {x: 0.05033493, y: 0.1462088}
+    - - {x: 0.1875, y: -0.4375}
+      - {x: 0.1875, y: 0.15625}
+      - {x: 0.125, y: 0.21875}
+      - {x: 0.1875, y: 0.28125}
+      - {x: 0.09375, y: 0.34375}
+      - {x: 0.125, y: 0.40625}
+      - {x: 0.15625, y: 0.46875}
+      - {x: 0.125, y: 0.46875}
+      - {x: 0.0625, y: 0.46875}
+      - {x: -0.03125, y: 0.34375}
+      - {x: -0.21875, y: 0.3125}
+      - {x: -0.3125, y: 0.1875}
+      - {x: -0.28125, y: 0.09375}
+      - {x: -0.25, y: -0.03125}
+      - {x: -0.21875, y: -0.15625}
+      - {x: -0.21875, y: -0.28125}
+      - {x: -0.25, y: -0.34375}
+      - {x: -0.1875, y: -0.40625}
+      - {x: -0.1875, y: -0.4375}
+      - {x: -0.15625, y: -0.46875}
+      - {x: -0.125, y: -0.46875}
+      - {x: 0.15625, y: -0.46875}
   m_UseDelaunayMesh: 0
---- !u!114 &1887012153609999569
+--- !u!50 &7080930806886265272
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3076334608139727420}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 2
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!114 &4407233498957806598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689619175459170485}
+  m_GameObject: {fileID: 3076334608139727420}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee8d7985391688442984998fca5d24d9, type: 3}

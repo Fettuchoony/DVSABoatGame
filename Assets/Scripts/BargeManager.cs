@@ -8,10 +8,14 @@ public class BargeManager : MonoBehaviour
     public int totalPollutedDirt;
     public int totalNormalDirt;
     public int totalFish;
+    public int totalChips;
+    public int totalExtinguisher;
     public int levelNum;
     private int initPollutedDirt;
     private int initNormalDirt;
     private int initFish;
+    private int initExtinguisher;
+    private int initChips;
     private DialogueManager dialogue;
 
     // Create Initial variables
@@ -37,6 +41,11 @@ public class BargeManager : MonoBehaviour
         inv = boat.GetComponent<PlayerInventory>();
         if (boat == null) {
             Debug.Log("Player Inventory reference is missing... Could not retrieve currency data.");
+        }
+
+        controlUI = GameObject.Find("Controls");
+        if (controlUI == null) {
+            Debug.Log("Player ControlUI reference is missing...");
         }
 
         // Find dialogue so we can start the text convo on main game reload
@@ -69,6 +78,20 @@ public class BargeManager : MonoBehaviour
         }
         totalFish = fishes.Length;
         initFish = totalFish;
+
+        GameObject[] extinguishers = GameObject.FindGameObjectsWithTag("Extinguisher");
+        if (extinguishers == null) {
+            Debug.Log("No extinguisher detected!");
+        }
+        totalExtinguisher = extinguishers.Length;
+        initExtinguisher = totalExtinguisher;
+
+        GameObject[] chips = GameObject.FindGameObjectsWithTag("Chip");
+        if (chips == null) {
+            Debug.Log("No chips detected!");
+        }
+        totalChips = chips.Length;
+        initChips = totalChips;
 
         // GameObject controlUI = GameObject.Find("Controls");
         // if (controlUI == null) {

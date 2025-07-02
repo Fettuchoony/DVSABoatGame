@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
     private PlayerController pc;
     private BaitManager baitManager;
 
-    private static int currency = 0;
+    private static int currency = 9999;
     // public int currSpeedUpgrade = 0;
     void Start()
     {
@@ -48,14 +48,14 @@ public class PlayerInventory : MonoBehaviour
         // The current cost of the speed upgrade
         upgradeCosts["speed"] = 1;
         // The set 7 speed upgrades
-        listOfUpgrades["speed"] = new float[7]{2f,3f,5f,8f,10f,13f,30f};
+        listOfUpgrades["speed"] = new float[7]{12f,14f,16f,18f,20f,22f,24f};
 
         // The current upgrade level of maxSpeed
         currUpgrades["maxSpeed"] = 0;
         //The current cost of the maxSpeed upgrade
         upgradeCosts["maxSpeed"] = 5;
         // The set 4 maxSpeed upgrades
-        listOfUpgrades["maxSpeed"] = new float[4]{10f,13f,20f,27f};
+        listOfUpgrades["maxSpeed"] = new float[4]{20f,24f,28f,32f};
 
     
     }

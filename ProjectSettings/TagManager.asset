@@ -9,6 +9,8 @@ TagManager:
   - CleanDirt
   - Fish
   - Barge
+  - Extinguisher
+  - Chip
   layers:
   - Default
   - TransparentFX
