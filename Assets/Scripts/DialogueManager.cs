@@ -110,9 +110,9 @@ public class DialogueManager : MonoBehaviour
         currDialogue[6] = "";
         
         // Completed 1st level dialogue
-        currDialogue[10] = "That PFAs contaminated dirt stood no chance!";
+        currDialogue[10] = "That Polluted dirt stood no chance!";
         currDialogue[11] = "Further down the river you should find more cleanup sights.";
-        currDialogue[12] = "Pollutants are detected by the PFAs sniffing dog, he will let you know when youre nearby a cleanup site.";
+        currDialogue[12] = "Pollutants are detected by the pollution sniffing dog, he will let you know when youre nearby a cleanup site.";
         currDialogue[13] = "";
 
         currDialogue[20] = "Great work!";

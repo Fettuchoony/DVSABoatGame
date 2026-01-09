@@ -5974,9 +5974,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -29
       objectReference: {fileID: 0}
+    - target: {fileID: 2620260654064198893, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
+      propertyPath: m_text
+      value: + 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2724056376846257844, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
       propertyPath: m_Name
       value: CostsUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156489187772872099, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
+      propertyPath: m_text
+      value: Pollution
       objectReference: {fileID: 0}
     - target: {fileID: 3953306345825386569, guid: 95d752c417d3bbe4fa85a78f71c21948, type: 3}
       propertyPath: m_Pivot.x
